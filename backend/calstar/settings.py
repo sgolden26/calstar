@@ -26,10 +26,10 @@ INSTALLED_APPS = [
     # Third-party apps
     'rest_framework',
     'corsheaders',
-    'oauth2_provider',  # For Berkeley SSO
-    'social_django',    # For Berkeley SSO
+    #'oauth2_provider',  # For Berkeley SSO
+    #'social_django',    # For Berkeley SSO
     
-    # Your custom apps
+    # custom apps
     'users',
     'courses',
     'reviews',
@@ -37,8 +37,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # CORS headers
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # CORS headers
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
